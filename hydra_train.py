@@ -5,7 +5,7 @@ from clearml import Task, Dataset
 
 task = Task.init(project_name='LibrispeechTest', task_name='finetuning', output_uri='s3://experiment-logging/storage', task_type='training')
 task.set_base_docker('thatnicneo/fairseq_test:v0.1.1')
-task.execute_remotely(queue_name='compute2', exit_process=True)
+task.execute_remotely(queue_name='compute3', exit_process=True)
 
 # Copyright (c) Facebook, Inc. and its affiliates.
 #

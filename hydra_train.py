@@ -45,7 +45,7 @@ from fairseq_cli.train import main as pre_main
 logger = logging.getLogger("fairseq_cli.hydra_train")
 
 
-@hydra.main(config_path=os.path.join("..", "fairseq", "config"), config_name="config")
+@hydra.main(config_path="../fairseq/examples/wav2vec/config/finetuning", config_name="base_10m")
 def hydra_main(cfg: FairseqConfig) -> float:
     print('Retrieving data from S3')
     dataset = Dataset.get(dataset_project='', dataset_name='')
